@@ -49,10 +49,7 @@ function calculate() {
         const result_p = document.createElement('p');
         result_p.textContent = result;
         result_container.appendChild(result_p);
+
     });
 
-    // const sum = input_num + 100;
-
-    // // 結果を表示
-    // document.getElementById('result').textContent = '計算結果: ' + sum;
 }
