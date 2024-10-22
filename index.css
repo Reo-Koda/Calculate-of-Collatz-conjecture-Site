@@ -60,6 +60,10 @@ label, input {
     font-weight: 600;
 }
 
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
 span {
     display: none;
 }

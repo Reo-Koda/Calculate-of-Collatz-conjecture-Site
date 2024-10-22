@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function calculate() {
     let input_num = parseInt(document.getElementById('input_num').value);
+    const skip_show = document.getElementById('skip_show').checked;
     const result_container = document.getElementById('result_container');
     result_container.innerHTML = '';
 
@@ -45,11 +46,19 @@ function calculate() {
         }
     }
 
-    result_array.forEach((result) => {
-        const result_p = document.createElement('p');
-        result_p.textContent = result;
-        result_container.appendChild(result_p);
-
+    result_array.forEach((result, index) => {
+        if (skip_show) {
+            const result_p = document.createElement('p');
+            result_p.textContent = result;
+            result_container.appendChild(result_p);
+        } else {
+            setTimeout(() => {
+                const result_p = document.createElement('p');
+                result_p.textContent = result;
+                result_container.appendChild(result_p);
+                result_p.scrollIntoView({ behavior: 'smooth' });
+            }, index * 500);
+        }
     });
 
 }
