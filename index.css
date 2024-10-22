@@ -1,9 +1,6 @@
 body {
     width: 768px;
     margin: 0 auto;
-
-    /* vertical-align:middle; 
-    padding: 50px 0; */
     text-align: center;
 }
 
@@ -61,4 +58,22 @@ p {
 label, input {
     font-size: 18px;
     font-weight: 600;
+}
+
+span {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+	body {
+        width: 90vw;
+    }
+    h1 {
+        margin: 40px 0 0;
+        font-size: 28px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 600;
+    }
 }
